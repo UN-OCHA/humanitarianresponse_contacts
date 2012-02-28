@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the HumanitarianResponse Contacts feature.
+ */
+
+include_once('humanitarianresponse_contacts.features.inc');
