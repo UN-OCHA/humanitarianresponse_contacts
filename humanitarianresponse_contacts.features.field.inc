@@ -159,7 +159,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'settings' => array(
         'allowed_values' => array(
           0 => array(
-            'vocabulary' => 'funding_mechanisms',
+            'vocabulary' => 'funding',
             'parent' => '0',
           ),
         ),
