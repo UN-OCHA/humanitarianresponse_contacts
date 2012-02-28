@@ -355,6 +355,16 @@ function humanitarianresponse_contacts_views_default_views() {
       'label' => 'Content: Funding (field_contact_funding)',
     ),
   );
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
+  $handler->display->display_options['path'] = 'coordination/contacts';
   $translatables['contacts'] = array(
     t('Master'),
     t('Contacts'),
@@ -371,6 +381,10 @@ function humanitarianresponse_contacts_views_default_views() {
     t('Cluster contact'),
     t('Funding'),
     t('Funding contact'),
+    t('Page'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
   );
   $export['contacts'] = $view;
 
