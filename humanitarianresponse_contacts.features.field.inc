@@ -10,14 +10,14 @@
 function humanitarianresponse_contacts_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-contact-field_contact_cluster'
-  $fields['node-contact-field_contact_cluster'] = array(
+  // Exported field: 'node-contact-field_clusters'
+  $fields['node-contact-field_clusters'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_contact_cluster',
+      'field_name' => 'field_clusters',
       'foreign keys' => array(
         'tid' => array(
           'columns' => array(
@@ -54,7 +54,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 6,
+          'weight' => 9,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -64,8 +64,8 @@ function humanitarianresponse_contacts_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_contact_cluster',
-      'label' => 'Cluster',
+      'field_name' => 'field_clusters',
+      'label' => 'Cluster(s)',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -74,8 +74,8 @@ function humanitarianresponse_contacts_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '7',
+        'type' => 'options_buttons',
+        'weight' => '8',
       ),
     ),
   );
@@ -129,77 +129,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'email_textfield',
-        'weight' => '5',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-contact-field_contact_funding'
-  $fields['node-contact-field_contact_funding'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_contact_funding',
-      'foreign keys' => array(
-        'tid' => array(
-          'columns' => array(
-            'tid' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
-        ),
-      ),
-      'module' => 'taxonomy',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'funding',
-            'parent' => '0',
-          ),
-        ),
-      ),
-      'translatable' => '0',
-      'type' => 'taxonomy_term_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'contact',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'taxonomy',
-          'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => 8,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_contact_funding',
-      'label' => 'Funding',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '9',
+        'weight' => '4',
       ),
     ),
   );
@@ -340,14 +270,14 @@ function humanitarianresponse_contacts_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-contact-field_contact_office'
-  $fields['node-contact-field_contact_office'] = array(
+  // Exported field: 'node-contact-field_coordination_hubs'
+  $fields['node-contact-field_coordination_hubs'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_contact_office',
+      'field_name' => 'field_coordination_hubs',
       'foreign keys' => array(
         'tid' => array(
           'columns' => array(
@@ -384,7 +314,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 7,
+          'weight' => 10,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -394,8 +324,8 @@ function humanitarianresponse_contacts_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_contact_office',
-      'label' => 'Office',
+      'field_name' => 'field_coordination_hubs',
+      'label' => 'Office(s)',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -404,20 +334,90 @@ function humanitarianresponse_contacts_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '8',
+        'type' => 'options_buttons',
+        'weight' => '10',
       ),
     ),
   );
 
-  // Exported field: 'node-contact-field_contact_organization'
-  $fields['node-contact-field_contact_organization'] = array(
+  // Exported field: 'node-contact-field_fundings'
+  $fields['node-contact-field_fundings'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_contact_organization',
+      'field_name' => 'field_fundings',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'funding',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'contact',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 11,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_fundings',
+      'label' => 'Funding(s)',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '11',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-contact-field_organizations'
+  $fields['node-contact-field_organizations'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_organizations',
       'foreign keys' => array(
         'tid' => array(
           'columns' => array(
@@ -454,7 +454,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 4,
+          'weight' => 12,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -464,8 +464,8 @@ function humanitarianresponse_contacts_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_contact_organization',
-      'label' => 'Organization',
+      'field_name' => 'field_organizations',
+      'label' => 'Organization(s)',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -538,20 +538,20 @@ function humanitarianresponse_contacts_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '0',
+        'weight' => '1',
       ),
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Cluster');
+  t('Cluster(s)');
   t('Email');
-  t('Funding');
+  t('Funding(s)');
   t('Job title');
   t('Last name');
-  t('Office');
-  t('Organization');
+  t('Office(s)');
+  t('Organization(s)');
   t('Salutation');
 
   return $fields;
