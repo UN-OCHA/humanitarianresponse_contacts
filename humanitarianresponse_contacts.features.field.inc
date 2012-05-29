@@ -54,7 +54,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 9,
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -106,7 +106,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           'module' => 'email',
           'settings' => array(),
           'type' => 'email_default',
-          'weight' => 2,
+          'weight' => '7',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -173,7 +173,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 5,
+          'weight' => '8',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -237,11 +237,11 @@ function humanitarianresponse_contacts_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 1,
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -314,7 +314,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 10,
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -384,7 +384,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 11,
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -454,7 +454,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 13,
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -524,7 +524,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 12,
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -583,11 +583,11 @@ function humanitarianresponse_contacts_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'list',
           'settings' => array(),
           'type' => 'list_default',
-          'weight' => 3,
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -608,7 +608,7 @@ function humanitarianresponse_contacts_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '1',
+        'weight' => '0',
       ),
     ),
   );
