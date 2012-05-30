@@ -211,24 +211,29 @@ function humanitarianresponse_contacts_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_contact_job_title',
       'foreign keys' => array(
-        'format' => array(
+        'tid' => array(
           'columns' => array(
-            'format' => 'format',
+            'tid' => 'tid',
           ),
-          'table' => 'filter_format',
+          'table' => 'taxonomy_term_data',
         ),
       ),
       'indexes' => array(
-        'format' => array(
-          0 => 'format',
+        'tid' => array(
+          0 => 'tid',
         ),
       ),
-      'module' => 'text',
+      'module' => 'taxonomy',
       'settings' => array(
-        'max_length' => '255',
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'job_title',
+            'parent' => '0',
+          ),
+        ),
       ),
       'translatable' => '0',
-      'type' => 'text',
+      'type' => 'taxonomy_term_reference',
     ),
     'field_instance' => array(
       'bundle' => 'contact',
@@ -238,10 +243,10 @@ function humanitarianresponse_contacts_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
+          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '8',
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 10,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -252,19 +257,19 @@ function humanitarianresponse_contacts_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_contact_job_title',
-      'label' => 'Job title',
+      'label' => 'Job Title',
       'required' => 0,
       'settings' => array(
-        'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 1,
-        'module' => 'text',
+        'active' => 0,
+        'module' => 'taxonomy',
         'settings' => array(
-          'size' => '60',
+          'autocomplete_path' => 'taxonomy/autocomplete',
+          'size' => 60,
         ),
-        'type' => 'text_textfield',
+        'type' => 'taxonomy_autocomplete',
         'weight' => '4',
       ),
     ),
@@ -687,7 +692,7 @@ function humanitarianresponse_contacts_field_default_fields() {
   t('Email');
   t('First name');
   t('Funding(s)');
-  t('Job title');
+  t('Job Title');
   t('Last name');
   t('Location');
   t('Office(s)');

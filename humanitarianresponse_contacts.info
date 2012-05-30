@@ -31,6 +31,7 @@ features[field][] = node-contact-field_locations
 features[field][] = node-contact-field_organizations
 features[field][] = node-contact-field_salutation
 features[node][] = contact
+features[taxonomy][] = job_title
 features[user_permission][] = create contact content
 features[user_permission][] = delete own contact content
 features[user_permission][] = edit own contact content
