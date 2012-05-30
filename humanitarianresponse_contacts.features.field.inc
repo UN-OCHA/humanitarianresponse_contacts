@@ -75,7 +75,7 @@ function humanitarianresponse_contacts_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '7',
+        'weight' => '8',
       ),
     ),
   );
@@ -129,7 +129,75 @@ function humanitarianresponse_contacts_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'email_textfield',
-        'weight' => '4',
+        'weight' => '5',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-contact-field_contact_first_name'
+  $fields['node-contact-field_contact_first_name'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_contact_first_name',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'contact',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 9,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_contact_first_name',
+      'label' => 'First name',
+      'required' => 1,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '2',
       ),
     ),
   );
@@ -197,7 +265,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );
@@ -265,7 +333,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '2',
+        'weight' => '3',
       ),
     ),
   );
@@ -335,7 +403,7 @@ function humanitarianresponse_contacts_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '8',
+        'weight' => '9',
       ),
     ),
   );
@@ -405,7 +473,7 @@ function humanitarianresponse_contacts_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '9',
+        'weight' => '10',
       ),
     ),
   );
@@ -475,7 +543,7 @@ function humanitarianresponse_contacts_field_default_fields() {
         'module' => 'hs_taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_hs',
-        'weight' => '6',
+        'weight' => '7',
       ),
     ),
   );
@@ -545,7 +613,7 @@ function humanitarianresponse_contacts_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '5',
+        'weight' => '6',
       ),
     ),
   );
@@ -617,6 +685,7 @@ function humanitarianresponse_contacts_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Cluster(s)');
   t('Email');
+  t('First name');
   t('Funding(s)');
   t('Job title');
   t('Last name');
