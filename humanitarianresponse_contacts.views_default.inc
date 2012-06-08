@@ -24,7 +24,6 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Contacts';
   $handler->display->display_options['use_ajax'] = TRUE;
-  $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['use_more_text'] = 'View all';
   $handler->display->display_options['link_display'] = 'page_2';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -36,152 +35,21 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
   $handler->display->display_options['exposed_form']['options']['autosubmit'] = 0;
   $handler->display->display_options['exposed_form']['options']['autosubmit_hide'] = 1;
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  /* No results behavior: Global: Text area */
-  $handler->display->display_options['empty']['area']['id'] = 'area';
-  $handler->display->display_options['empty']['area']['table'] = 'views';
-  $handler->display->display_options['empty']['area']['field'] = 'area';
-  $handler->display->display_options['empty']['area']['empty'] = FALSE;
-  $handler->display->display_options['empty']['area']['content'] = 'There are no contacts';
-  $handler->display->display_options['empty']['area']['format'] = 'plain_text';
-  $handler->display->display_options['empty']['area']['tokenize'] = 0;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
-  /* Field: Content: Job Title */
-  $handler->display->display_options['fields']['field_contact_job_title']['id'] = 'field_contact_job_title';
-  $handler->display->display_options['fields']['field_contact_job_title']['table'] = 'field_data_field_contact_job_title';
-  $handler->display->display_options['fields']['field_contact_job_title']['field'] = 'field_contact_job_title';
-  $handler->display->display_options['fields']['field_contact_job_title']['label'] = '';
-  $handler->display->display_options['fields']['field_contact_job_title']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_contact_job_title']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_contact_job_title']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_contact_job_title']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_contact_job_title']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_contact_job_title']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['field_contact_job_title']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['field_contact_job_title']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_contact_job_title']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_contact_job_title']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['field_contact_job_title']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_contact_job_title']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['field_contact_job_title']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_contact_job_title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_contact_job_title']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['field_contact_job_title']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['field_contact_job_title']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_contact_job_title']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_contact_job_title']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_contact_job_title']['field_api_classes'] = 0;
-  /* Field: Content: Email */
-  $handler->display->display_options['fields']['field_contact_email']['id'] = 'field_contact_email';
-  $handler->display->display_options['fields']['field_contact_email']['table'] = 'field_data_field_contact_email';
-  $handler->display->display_options['fields']['field_contact_email']['field'] = 'field_contact_email';
-  $handler->display->display_options['fields']['field_contact_email']['label'] = '';
-  $handler->display->display_options['fields']['field_contact_email']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_contact_email']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_contact_email']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_contact_email']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_contact_email']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_contact_email']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['field_contact_email']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['field_contact_email']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_contact_email']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_contact_email']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['field_contact_email']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_contact_email']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['field_contact_email']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_contact_email']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_contact_email']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['field_contact_email']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['field_contact_email']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_contact_email']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_contact_email']['field_api_classes'] = 0;
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'contact' => 'contact',
-  );
-
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page_1');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Operational Presence';
-  $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
-    'field_clusters' => 'field_clusters',
-    'field_organizations' => 'field_organizations',
-    'field_locations' => 'field_locations',
-    'field_contact_first_name' => 'field_contact_first_name',
-    'field_contact_lastname' => 'field_contact_lastname',
+    'title' => 'title',
     'field_contact_job_title' => 'field_contact_job_title',
     'field_contact_email' => 'field_contact_email',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
-    'field_clusters' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_organizations' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_locations' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_contact_first_name' => array(
-      'sortable' => 1,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_contact_lastname' => array(
-      'sortable' => 1,
+    'title' => array(
+      'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
@@ -205,10 +73,14 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['style_options']['override'] = 1;
   $handler->display->display_options['style_options']['sticky'] = 0;
   $handler->display->display_options['style_options']['empty_table'] = 0;
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = FALSE;
+  $handler->display->display_options['empty']['area']['content'] = 'There are no contacts';
+  $handler->display->display_options['empty']['area']['format'] = 'plain_text';
+  $handler->display->display_options['empty']['area']['tokenize'] = 0;
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -285,6 +157,7 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['fields']['field_organizations']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_organizations']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_organizations']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_organizations']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_organizations']['group_rows'] = 1;
   $handler->display->display_options['fields']['field_organizations']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_organizations']['delta_reversed'] = 0;
@@ -312,6 +185,7 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['fields']['field_locations']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_locations']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_locations']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_locations']['type'] = 'hs_taxonomy_term_reference_hierarchical_text';
   $handler->display->display_options['fields']['field_locations']['group_rows'] = 1;
   $handler->display->display_options['fields']['field_locations']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_locations']['delta_reversed'] = 0;
@@ -321,7 +195,7 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['fields']['field_contact_first_name']['id'] = 'field_contact_first_name';
   $handler->display->display_options['fields']['field_contact_first_name']['table'] = 'field_data_field_contact_first_name';
   $handler->display->display_options['fields']['field_contact_first_name']['field'] = 'field_contact_first_name';
-  $handler->display->display_options['fields']['field_contact_first_name']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_contact_first_name']['alter']['alter_text'] = 1;
   $handler->display->display_options['fields']['field_contact_first_name']['alter']['make_link'] = 1;
   $handler->display->display_options['fields']['field_contact_first_name']['alter']['path'] = 'node/[nid]';
   $handler->display->display_options['fields']['field_contact_first_name']['alter']['absolute'] = 0;
@@ -345,7 +219,6 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['fields']['field_contact_lastname']['id'] = 'field_contact_lastname';
   $handler->display->display_options['fields']['field_contact_lastname']['table'] = 'field_data_field_contact_lastname';
   $handler->display->display_options['fields']['field_contact_lastname']['field'] = 'field_contact_lastname';
-  $handler->display->display_options['fields']['field_contact_lastname']['label'] = 'Last Name';
   $handler->display->display_options['fields']['field_contact_lastname']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['field_contact_lastname']['alter']['make_link'] = 1;
   $handler->display->display_options['fields']['field_contact_lastname']['alter']['path'] = 'node/[nid]';
@@ -360,7 +233,7 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['fields']['field_contact_lastname']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['field_contact_lastname']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_contact_lastname']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_contact_lastname']['element_label_colon'] = 0;
+  $handler->display->display_options['fields']['field_contact_lastname']['element_label_colon'] = 1;
   $handler->display->display_options['fields']['field_contact_lastname']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['field_contact_lastname']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_contact_lastname']['empty_zero'] = 0;
@@ -389,7 +262,6 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['fields']['field_contact_job_title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_contact_job_title']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_contact_job_title']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_contact_job_title']['group_column'] = 'value';
   $handler->display->display_options['fields']['field_contact_job_title']['field_api_classes'] = 0;
   /* Field: Content: Email */
   $handler->display->display_options['fields']['field_contact_email']['id'] = 'field_contact_email';
@@ -408,18 +280,22 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['fields']['field_contact_email']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['field_contact_email']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_contact_email']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_contact_email']['element_label_colon'] = 0;
+  $handler->display->display_options['fields']['field_contact_email']['element_label_colon'] = 1;
   $handler->display->display_options['fields']['field_contact_email']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['field_contact_email']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_contact_email']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_contact_email']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_contact_email']['field_api_classes'] = 0;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
   /* Filter criterion: Content: Type */
@@ -429,10 +305,12 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'contact' => 'contact',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Content: Cluster(s) (field_clusters) */
   $handler->display->display_options['filters']['field_clusters_tid']['id'] = 'field_clusters_tid';
   $handler->display->display_options['filters']['field_clusters_tid']['table'] = 'field_data_field_clusters';
   $handler->display->display_options['filters']['field_clusters_tid']['field'] = 'field_clusters_tid';
+  $handler->display->display_options['filters']['field_clusters_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_clusters_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_clusters_tid']['expose']['operator_id'] = 'field_clusters_tid_op';
   $handler->display->display_options['filters']['field_clusters_tid']['expose']['label'] = 'Cluster';
@@ -447,6 +325,7 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['filters']['field_locations_tid']['id'] = 'field_locations_tid';
   $handler->display->display_options['filters']['field_locations_tid']['table'] = 'field_data_field_locations';
   $handler->display->display_options['filters']['field_locations_tid']['field'] = 'field_locations_tid';
+  $handler->display->display_options['filters']['field_locations_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_locations_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_locations_tid']['expose']['operator_id'] = 'field_locations_tid_op';
   $handler->display->display_options['filters']['field_locations_tid']['expose']['label'] = 'Location';
@@ -462,6 +341,7 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['filters']['field_organizations_tid']['id'] = 'field_organizations_tid';
   $handler->display->display_options['filters']['field_organizations_tid']['table'] = 'field_data_field_organizations';
   $handler->display->display_options['filters']['field_organizations_tid']['field'] = 'field_organizations_tid';
+  $handler->display->display_options['filters']['field_organizations_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_organizations_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_organizations_tid']['expose']['operator_id'] = 'field_organizations_tid_op';
   $handler->display->display_options['filters']['field_organizations_tid']['expose']['label'] = 'Organization';
@@ -477,6 +357,7 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['filters']['field_contact_job_title_tid']['table'] = 'field_data_field_contact_job_title';
   $handler->display->display_options['filters']['field_contact_job_title_tid']['field'] = 'field_contact_job_title_tid';
   $handler->display->display_options['filters']['field_contact_job_title_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_contact_job_title_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_contact_job_title_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_contact_job_title_tid']['expose']['operator_id'] = 'field_contact_job_title_tid_op';
   $handler->display->display_options['filters']['field_contact_job_title_tid']['expose']['label'] = 'Job Title';
@@ -485,19 +366,80 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['filters']['field_contact_job_title_tid']['reduce_duplicates'] = 0;
   $handler->display->display_options['filters']['field_contact_job_title_tid']['vocabulary'] = 'job_title';
   $handler->display->display_options['filters']['field_contact_job_title_tid']['error_message'] = 1;
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Operational Presence';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_clusters' => 'field_clusters',
+    'field_organizations' => 'field_organizations',
+    'field_locations' => 'field_locations',
+    'field_contact_first_name' => 'field_contact_first_name',
+    'field_contact_lastname' => 'field_contact_lastname',
+    'field_contact_job_title' => 'field_contact_job_title',
+    'field_contact_email' => 'field_contact_email',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_clusters' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_organizations' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_locations' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_contact_first_name' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_contact_lastname' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_contact_job_title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_contact_email' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['style_options']['override'] = 1;
+  $handler->display->display_options['style_options']['sticky'] = 0;
+  $handler->display->display_options['style_options']['empty_table'] = 0;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['path'] = 'coordination/operational-presence';
 
   /* Display: Contacts per term */
   $handler = $view->new_display('page', 'Contacts per term', 'page_2');
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
-  $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -529,6 +471,93 @@ function humanitarianresponse_contacts_views_default_views() {
 
   /* Display: Contacts Block per term */
   $handler = $view->new_display('block', 'Contacts Block per term', 'block_1');
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['use_more_text'] = 'View all';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  /* Field: Content: Job Title */
+  $handler->display->display_options['fields']['field_contact_job_title']['id'] = 'field_contact_job_title';
+  $handler->display->display_options['fields']['field_contact_job_title']['table'] = 'field_data_field_contact_job_title';
+  $handler->display->display_options['fields']['field_contact_job_title']['field'] = 'field_contact_job_title';
+  $handler->display->display_options['fields']['field_contact_job_title']['label'] = '';
+  $handler->display->display_options['fields']['field_contact_job_title']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_contact_job_title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_contact_job_title']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_contact_job_title']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_contact_job_title']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_contact_job_title']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_contact_job_title']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_contact_job_title']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_contact_job_title']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_contact_job_title']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_contact_job_title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_contact_job_title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_contact_job_title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_contact_job_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_contact_job_title']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_contact_job_title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_contact_job_title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_contact_job_title']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_contact_job_title']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_contact_job_title']['field_api_classes'] = 0;
+  /* Field: Content: Email */
+  $handler->display->display_options['fields']['field_contact_email']['id'] = 'field_contact_email';
+  $handler->display->display_options['fields']['field_contact_email']['table'] = 'field_data_field_contact_email';
+  $handler->display->display_options['fields']['field_contact_email']['field'] = 'field_contact_email';
+  $handler->display->display_options['fields']['field_contact_email']['label'] = '';
+  $handler->display->display_options['fields']['field_contact_email']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_contact_email']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_contact_email']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_contact_email']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_contact_email']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_contact_email']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_contact_email']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_contact_email']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_contact_email']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_contact_email']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_contact_email']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_contact_email']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_contact_email']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_contact_email']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_contact_email']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_contact_email']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_contact_email']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_contact_email']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_contact_email']['field_api_classes'] = 0;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -556,6 +585,21 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['arguments']['tid']['require_value'] = 0;
   $handler->display->display_options['arguments']['tid']['reduce_duplicates'] = 0;
   $handler->display->display_options['arguments']['tid']['set_breadcrumb'] = 0;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'contact' => 'contact',
+  );
   $handler->display->display_options['block_description'] = 'Contacts Block per term';
   $export['contacts'] = $view;
 
