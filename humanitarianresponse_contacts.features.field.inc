@@ -10,7 +10,7 @@
 function humanitarianresponse_contacts_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-contact-field_clusters'
+  // Exported field: 'node-contact-field_clusters'.
   $fields['node-contact-field_clusters'] = array(
     'field_config' => array(
       'active' => '1',
@@ -31,6 +31,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -39,6 +40,7 @@ function humanitarianresponse_contacts_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -80,7 +82,7 @@ function humanitarianresponse_contacts_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-contact-field_contact_email'
+  // Exported field: 'node-contact-field_contact_email'.
   $fields['node-contact-field_contact_email'] = array(
     'field_config' => array(
       'active' => '1',
@@ -90,6 +92,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'field_name' => 'field_contact_email',
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'email',
       'settings' => array(),
       'translatable' => '0',
@@ -134,7 +137,7 @@ function humanitarianresponse_contacts_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-contact-field_contact_first_name'
+  // Exported field: 'node-contact-field_contact_first_name'.
   $fields['node-contact-field_contact_first_name'] = array(
     'field_config' => array(
       'active' => '1',
@@ -155,6 +158,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
@@ -202,7 +206,7 @@ function humanitarianresponse_contacts_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-contact-field_contact_job_title'
+  // Exported field: 'node-contact-field_contact_job_title'.
   $fields['node-contact-field_contact_job_title'] = array(
     'field_config' => array(
       'active' => '1',
@@ -223,6 +227,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -231,6 +236,7 @@ function humanitarianresponse_contacts_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -275,7 +281,7 @@ function humanitarianresponse_contacts_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-contact-field_contact_lastname'
+  // Exported field: 'node-contact-field_contact_lastname'.
   $fields['node-contact-field_contact_lastname'] = array(
     'field_config' => array(
       'active' => '1',
@@ -296,6 +302,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
@@ -343,7 +350,7 @@ function humanitarianresponse_contacts_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-contact-field_coordination_hubs'
+  // Exported field: 'node-contact-field_coordination_hubs'.
   $fields['node-contact-field_coordination_hubs'] = array(
     'field_config' => array(
       'active' => '1',
@@ -364,6 +371,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -372,6 +380,7 @@ function humanitarianresponse_contacts_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -413,7 +422,7 @@ function humanitarianresponse_contacts_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-contact-field_fundings'
+  // Exported field: 'node-contact-field_fundings'.
   $fields['node-contact-field_fundings'] = array(
     'field_config' => array(
       'active' => '1',
@@ -434,6 +443,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -442,6 +452,7 @@ function humanitarianresponse_contacts_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -483,7 +494,7 @@ function humanitarianresponse_contacts_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-contact-field_locations'
+  // Exported field: 'node-contact-field_locations'.
   $fields['node-contact-field_locations'] = array(
     'field_config' => array(
       'active' => '1',
@@ -504,6 +515,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -512,6 +524,7 @@ function humanitarianresponse_contacts_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -553,7 +566,7 @@ function humanitarianresponse_contacts_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-contact-field_organizations'
+  // Exported field: 'node-contact-field_organizations'.
   $fields['node-contact-field_organizations'] = array(
     'field_config' => array(
       'active' => '1',
@@ -574,6 +587,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -582,6 +596,7 @@ function humanitarianresponse_contacts_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -623,7 +638,7 @@ function humanitarianresponse_contacts_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-contact-field_salutation'
+  // Exported field: 'node-contact-field_salutation'.
   $fields['node-contact-field_salutation'] = array(
     'field_config' => array(
       'active' => '1',
@@ -637,6 +652,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           0 => 'value',
         ),
       ),
+      'locked' => '0',
       'module' => 'list',
       'settings' => array(
         'allowed_values' => array(
