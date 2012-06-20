@@ -473,7 +473,6 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler = $view->new_display('block', 'Contacts Block per term', 'block_1');
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
-  $handler->display->display_options['use_more_text'] = 'View all';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
@@ -601,6 +600,34 @@ function humanitarianresponse_contacts_views_default_views() {
     'contact' => 'contact',
   );
   $handler->display->display_options['block_description'] = 'Contacts Block per term';
+  $translatables['contacts'] = array(
+    t('Master'),
+    t('Contacts'),
+    t('View all'),
+    t('Search'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('There are no contacts'),
+    t('Cluster'),
+    t('Organization'),
+    t('Location'),
+    t('First name'),
+    t('node/[nid]'),
+    t('Last name'),
+    t('Job Title'),
+    t('Email'),
+    t('Page'),
+    t('Operational Presence'),
+    t('more'),
+    t('Contacts per term'),
+    t('All'),
+    t('Contacts Block per term'),
+  );
   $export['contacts'] = $view;
 
   return $export;
