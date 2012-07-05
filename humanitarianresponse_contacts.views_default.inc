@@ -285,6 +285,11 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['fields']['field_contact_email']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_contact_email']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_contact_email']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_contact_email']['type'] = 'invisimail_js_entities';
+  $handler->display->display_options['fields']['field_contact_email']['settings'] = array(
+    'chunk' => 0,
+    'link' => 1,
+  );
   $handler->display->display_options['fields']['field_contact_email']['field_api_classes'] = 0;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
@@ -556,6 +561,11 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['fields']['field_contact_email']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_contact_email']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_contact_email']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_contact_email']['type'] = 'invisimail_js_entities';
+  $handler->display->display_options['fields']['field_contact_email']['settings'] = array(
+    'chunk' => 0,
+    'link' => 1,
+  );
   $handler->display->display_options['fields']['field_contact_email']['field_api_classes'] = 0;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */

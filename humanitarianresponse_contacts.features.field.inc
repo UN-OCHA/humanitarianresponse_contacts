@@ -105,9 +105,12 @@ function humanitarianresponse_contacts_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'email',
-          'settings' => array(),
-          'type' => 'email_default',
+          'module' => 'invisimail',
+          'settings' => array(
+            'encoder' => 'js_entities',
+            'link' => 1,
+          ),
+          'type' => 'invisimail_js_entities',
           'weight' => '3',
         ),
         'teaser' => array(
@@ -738,7 +741,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 10,
+          'weight' => '10',
         ),
         'teaser' => array(
           'label' => 'above',
