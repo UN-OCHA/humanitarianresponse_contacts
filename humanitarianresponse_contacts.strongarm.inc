@@ -109,7 +109,11 @@ function humanitarianresponse_contacts_strongarm() {
       ),
     ),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'path' => array(
+          'weight' => '12',
+        ),
+      ),
       'display' => array(),
     ),
   );
