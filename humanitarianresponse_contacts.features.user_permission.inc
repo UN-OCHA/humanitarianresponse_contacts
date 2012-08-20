@@ -22,14 +22,18 @@ function humanitarianresponse_contacts_user_default_permissions() {
   // Exported permission: delete own contact content.
   $permissions['delete own contact content'] = array(
     'name' => 'delete own contact content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'editor',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit own contact content.
   $permissions['edit own contact content'] = array(
     'name' => 'edit own contact content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'editor',
+    ),
     'module' => 'node',
   );
 
