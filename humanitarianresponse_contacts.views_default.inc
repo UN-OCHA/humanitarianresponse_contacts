@@ -356,95 +356,6 @@ function humanitarianresponse_contacts_views_default_views() {
   );
   $handler->display->display_options['block_description'] = 'Contacts Block per term';
 
-  /* Display: Page per Country */
-  $handler = $view->new_display('page', 'Page per Country', 'page_3');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Countries (field_countries) */
-  $handler->display->display_options['arguments']['field_countries_iso2']['id'] = 'field_countries_iso2';
-  $handler->display->display_options['arguments']['field_countries_iso2']['table'] = 'field_data_field_countries';
-  $handler->display->display_options['arguments']['field_countries_iso2']['field'] = 'field_countries_iso2';
-  $handler->display->display_options['arguments']['field_countries_iso2']['default_action'] = 'not found';
-  $handler->display->display_options['arguments']['field_countries_iso2']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_countries_iso2']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_countries_iso2']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_countries_iso2']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_countries_iso2']['limit'] = '0';
-  $handler->display->display_options['path'] = 'countries/%/contacts';
-
-  /* Display: Block per country */
-  $handler = $view->new_display('block', 'Block per country', 'block_2');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['use_more'] = TRUE;
-  $handler->display->display_options['defaults']['link_display'] = FALSE;
-  $handler->display->display_options['link_display'] = 'page_3';
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Job Title */
-  $handler->display->display_options['fields']['field_contact_job_title']['id'] = 'field_contact_job_title';
-  $handler->display->display_options['fields']['field_contact_job_title']['table'] = 'field_data_field_contact_job_title';
-  $handler->display->display_options['fields']['field_contact_job_title']['field'] = 'field_contact_job_title';
-  $handler->display->display_options['fields']['field_contact_job_title']['label'] = '';
-  $handler->display->display_options['fields']['field_contact_job_title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_contact_job_title']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Content: Email */
-  $handler->display->display_options['fields']['field_contact_email']['id'] = 'field_contact_email';
-  $handler->display->display_options['fields']['field_contact_email']['table'] = 'field_data_field_contact_email';
-  $handler->display->display_options['fields']['field_contact_email']['field'] = 'field_contact_email';
-  $handler->display->display_options['fields']['field_contact_email']['label'] = '';
-  $handler->display->display_options['fields']['field_contact_email']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_contact_email']['type'] = 'invisimail_js_entities';
-  $handler->display->display_options['fields']['field_contact_email']['settings'] = array(
-    'chunk' => 0,
-    'link' => 1,
-  );
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Countries (field_countries) */
-  $handler->display->display_options['arguments']['field_countries_iso2']['id'] = 'field_countries_iso2';
-  $handler->display->display_options['arguments']['field_countries_iso2']['table'] = 'field_data_field_countries';
-  $handler->display->display_options['arguments']['field_countries_iso2']['field'] = 'field_countries_iso2';
-  $handler->display->display_options['arguments']['field_countries_iso2']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['field_countries_iso2']['default_argument_type'] = 'raw';
-  $handler->display->display_options['arguments']['field_countries_iso2']['default_argument_options']['index'] = '1';
-  $handler->display->display_options['arguments']['field_countries_iso2']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_countries_iso2']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_countries_iso2']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_countries_iso2']['limit'] = '0';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = '1';
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'contact' => 'contact',
-  );
-  $handler->display->display_options['block_description'] = 'Contacts per Country';
   $translatables['contacts'] = array(
     t('Master'),
     t('Contacts'),
@@ -475,9 +386,6 @@ function humanitarianresponse_contacts_views_default_views() {
     t('Contacts per term'),
     t('All'),
     t('Contacts Block per term'),
-    t('Page per Country'),
-    t('Block per country'),
-    t('Contacts per Country'),
   );
   $export['contacts'] = $view;
 
