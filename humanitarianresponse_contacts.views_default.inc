@@ -355,7 +355,6 @@ function humanitarianresponse_contacts_views_default_views() {
     'contact' => 'contact',
   );
   $handler->display->display_options['block_description'] = 'Contacts Block per term';
-
   $translatables['contacts'] = array(
     t('Master'),
     t('Contacts'),
