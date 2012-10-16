@@ -23,7 +23,6 @@ function humanitarianresponse_contacts_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Contacts';
-  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'View all';
   $handler->display->display_options['link_display'] = 'page_2';
@@ -267,8 +266,6 @@ function humanitarianresponse_contacts_views_default_views() {
 
   /* Display: Contacts per term */
   $handler = $view->new_display('page', 'Contacts per term', 'page_2');
-  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
-  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
