@@ -324,6 +324,13 @@ function humanitarianresponse_contacts_views_default_views() {
     'chunk' => 0,
     'link' => 1,
   );
+  /* Field: Content: Telephone(s) */
+  $handler->display->display_options['fields']['field_telephones']['id'] = 'field_telephones';
+  $handler->display->display_options['fields']['field_telephones']['table'] = 'field_data_field_telephones';
+  $handler->display->display_options['fields']['field_telephones']['field'] = 'field_telephones';
+  $handler->display->display_options['fields']['field_telephones']['label'] = '';
+  $handler->display->display_options['fields']['field_telephones']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_telephones']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
