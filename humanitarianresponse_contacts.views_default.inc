@@ -385,19 +385,16 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['fields']['field_clusters']['field'] = 'field_clusters';
   $handler->display->display_options['fields']['field_clusters']['label'] = 'Cluster';
   $handler->display->display_options['fields']['field_clusters']['delta_offset'] = '0';
-  /* Field: Content: Source */
-  $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
-  $handler->display->display_options['fields']['field_organizations']['table'] = 'field_data_field_organizations';
-  $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
-  $handler->display->display_options['fields']['field_organizations']['label'] = 'Organization';
-  $handler->display->display_options['fields']['field_organizations']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_organizations']['delta_offset'] = '0';
-  /* Field: Content: Location */
-  $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
-  $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
-  $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
-  $handler->display->display_options['fields']['field_locations']['type'] = 'hs_taxonomy_term_reference_hierarchical_text';
-  $handler->display->display_options['fields']['field_locations']['delta_offset'] = '0';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Name';
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Salutation */
+  $handler->display->display_options['fields']['field_salutation']['id'] = 'field_salutation';
+  $handler->display->display_options['fields']['field_salutation']['table'] = 'field_data_field_salutation';
+  $handler->display->display_options['fields']['field_salutation']['field'] = 'field_salutation';
   /* Field: Content: First name */
   $handler->display->display_options['fields']['field_contact_first_name']['id'] = 'field_contact_first_name';
   $handler->display->display_options['fields']['field_contact_first_name']['table'] = 'field_data_field_contact_first_name';
@@ -411,12 +408,6 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['fields']['field_contact_lastname']['field'] = 'field_contact_lastname';
   $handler->display->display_options['fields']['field_contact_lastname']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_contact_lastname']['alter']['path'] = 'node/[nid]';
-  /* Field: Content: Job Title */
-  $handler->display->display_options['fields']['field_contact_job_title']['id'] = 'field_contact_job_title';
-  $handler->display->display_options['fields']['field_contact_job_title']['table'] = 'field_data_field_contact_job_title';
-  $handler->display->display_options['fields']['field_contact_job_title']['field'] = 'field_contact_job_title';
-  $handler->display->display_options['fields']['field_contact_job_title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_contact_job_title']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Content: Email */
   $handler->display->display_options['fields']['field_contact_email']['id'] = 'field_contact_email';
   $handler->display->display_options['fields']['field_contact_email']['table'] = 'field_data_field_contact_email';
@@ -426,6 +417,57 @@ function humanitarianresponse_contacts_views_default_views() {
     'chunk' => 0,
     'link' => 1,
   );
+  /* Field: Content: Telephone(s) */
+  $handler->display->display_options['fields']['field_telephones']['id'] = 'field_telephones';
+  $handler->display->display_options['fields']['field_telephones']['table'] = 'field_data_field_telephones';
+  $handler->display->display_options['fields']['field_telephones']['field'] = 'field_telephones';
+  $handler->display->display_options['fields']['field_telephones']['label'] = 'Telephones';
+  $handler->display->display_options['fields']['field_telephones']['delta_offset'] = '0';
+  /* Field: Content: Source */
+  $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
+  $handler->display->display_options['fields']['field_organizations']['table'] = 'field_data_field_organizations';
+  $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
+  $handler->display->display_options['fields']['field_organizations']['label'] = 'Organization';
+  $handler->display->display_options['fields']['field_organizations']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_organizations']['delta_offset'] = '0';
+  /* Field: Content: Job Title */
+  $handler->display->display_options['fields']['field_contact_job_title']['id'] = 'field_contact_job_title';
+  $handler->display->display_options['fields']['field_contact_job_title']['table'] = 'field_data_field_contact_job_title';
+  $handler->display->display_options['fields']['field_contact_job_title']['field'] = 'field_contact_job_title';
+  $handler->display->display_options['fields']['field_contact_job_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_contact_job_title']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Content: Location */
+  $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
+  $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
+  $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
+  $handler->display->display_options['fields']['field_locations']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_locations']['delta_offset'] = '0';
+  /* Field: Content: Coordination Hub(s) */
+  $handler->display->display_options['fields']['field_coordination_hubs']['id'] = 'field_coordination_hubs';
+  $handler->display->display_options['fields']['field_coordination_hubs']['table'] = 'field_data_field_coordination_hubs';
+  $handler->display->display_options['fields']['field_coordination_hubs']['field'] = 'field_coordination_hubs';
+  $handler->display->display_options['fields']['field_coordination_hubs']['label'] = 'Coordination Hub';
+  $handler->display->display_options['fields']['field_coordination_hubs']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_coordination_hubs']['delta_offset'] = '0';
+  /* Field: Content: Funding(s) */
+  $handler->display->display_options['fields']['field_fundings']['id'] = 'field_fundings';
+  $handler->display->display_options['fields']['field_fundings']['table'] = 'field_data_field_fundings';
+  $handler->display->display_options['fields']['field_fundings']['field'] = 'field_fundings';
+  $handler->display->display_options['fields']['field_fundings']['label'] = 'Fundings';
+  $handler->display->display_options['fields']['field_fundings']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_fundings']['delta_offset'] = '0';
+  /* Field: Content: Themes */
+  $handler->display->display_options['fields']['field_themes']['id'] = 'field_themes';
+  $handler->display->display_options['fields']['field_themes']['table'] = 'field_data_field_themes';
+  $handler->display->display_options['fields']['field_themes']['field'] = 'field_themes';
+  $handler->display->display_options['fields']['field_themes']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_themes']['delta_offset'] = '0';
+  /* Field: Content: Emergencies */
+  $handler->display->display_options['fields']['field_emergencies']['id'] = 'field_emergencies';
+  $handler->display->display_options['fields']['field_emergencies']['table'] = 'field_data_field_emergencies';
+  $handler->display->display_options['fields']['field_emergencies']['field'] = 'field_emergencies';
+  $handler->display->display_options['fields']['field_emergencies']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_emergencies']['delta_offset'] = '0';
   $handler->display->display_options['path'] = 'coordination/operational-presence/xls';
   $handler->display->display_options['displays'] = array(
     'page_1' => 'page_1',
@@ -464,6 +506,13 @@ function humanitarianresponse_contacts_views_default_views() {
     t('All'),
     t('Contacts Block per term'),
     t('XLS'),
+    t('Name'),
+    t('Salutation'),
+    t('Telephones'),
+    t('Coordination Hub'),
+    t('Fundings'),
+    t('Themes'),
+    t('Emergencies'),
   );
   $export['contacts'] = $view;
 
