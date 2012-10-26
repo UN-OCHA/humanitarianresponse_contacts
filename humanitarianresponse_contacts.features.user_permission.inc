@@ -10,6 +10,16 @@
 function humanitarianresponse_contacts_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: clear csv_contacts feeds.
+  $permissions['clear csv_contacts feeds'] = array(
+    'name' => 'clear csv_contacts feeds',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'manager',
+    ),
+    'module' => 'feeds',
+  );
+
   // Exported permission: create contact content.
   $permissions['create contact content'] = array(
     'name' => 'create contact content',
@@ -35,6 +45,26 @@ function humanitarianresponse_contacts_user_default_permissions() {
       0 => 'editor',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: import csv_contacts feeds.
+  $permissions['import csv_contacts feeds'] = array(
+    'name' => 'import csv_contacts feeds',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'manager',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: unlock csv_contacts feeds.
+  $permissions['unlock csv_contacts feeds'] = array(
+    'name' => 'unlock csv_contacts feeds',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'manager',
+    ),
+    'module' => 'feeds',
   );
 
   return $permissions;
