@@ -262,6 +262,15 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<p style="text-align: center;">Please note that this contact list can also be exported into Excel by clicking on the following link:</p>
+<p style="text-align: center;"><a href="/coordination/operational-presence.xls">Download</a></p>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['path'] = 'coordination/operational-presence';
 
   /* Display: Contacts per term */
@@ -468,7 +477,7 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['fields']['field_emergencies']['field'] = 'field_emergencies';
   $handler->display->display_options['fields']['field_emergencies']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_emergencies']['delta_offset'] = '0';
-  $handler->display->display_options['path'] = 'coordination/operational-presence/xls';
+  $handler->display->display_options['path'] = 'coordination/operational-presence.xls';
   $handler->display->display_options['displays'] = array(
     'page_1' => 'page_1',
     'default' => 0,
@@ -581,7 +590,7 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['fields']['field_emergencies']['field'] = 'field_emergencies';
   $handler->display->display_options['fields']['field_emergencies']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_emergencies']['delta_offset'] = '0';
-  $handler->display->display_options['path'] = 'coordination/operational-presence/xml';
+  $handler->display->display_options['path'] = 'coordination/operational-presence.xml';
   $handler->display->display_options['displays'] = array(
     'page_1' => 'page_1',
     'default' => 0,
@@ -615,6 +624,8 @@ function humanitarianresponse_contacts_views_default_views() {
     t('Page'),
     t('Operational Presence'),
     t('more'),
+    t('<p style="text-align: center;">Please note that this contact list can also be exported into Excel by clicking on the following link:</p>
+<p style="text-align: center;"><a href="/coordination/operational-presence.xls">Download</a></p>'),
     t('Contacts per term'),
     t('All'),
     t('Contacts Block per term'),
