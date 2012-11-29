@@ -12,6 +12,7 @@ dependencies[] = feeds_tamper
 dependencies[] = hs_taxonomy
 dependencies[] = humanitarianresponse_clusters
 dependencies[] = humanitarianresponse_coordination
+dependencies[] = humanitarianresponse_core
 dependencies[] = humanitarianresponse_emergencies
 dependencies[] = humanitarianresponse_funding
 dependencies[] = humanitarianresponse_organizations
