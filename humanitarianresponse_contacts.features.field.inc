@@ -611,7 +611,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_fundings',
-      'label' => 'Funding(s)',
+      'label' => 'Funding',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -1359,7 +1359,7 @@ function humanitarianresponse_contacts_field_default_fields() {
   t('Email');
   t('Emergencies');
   t('First name');
-  t('Funding(s)');
+  t('Funding');
   t('Job Title');
   t('Last name');
   t('Linked Resources');

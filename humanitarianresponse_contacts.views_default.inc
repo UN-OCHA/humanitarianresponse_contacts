@@ -571,11 +571,11 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['fields']['field_coordination_hubs']['label'] = 'Coordination Hub';
   $handler->display->display_options['fields']['field_coordination_hubs']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_coordination_hubs']['delta_offset'] = '0';
-  /* Field: Content: Funding(s) */
+  /* Field: Content: Funding */
   $handler->display->display_options['fields']['field_fundings']['id'] = 'field_fundings';
   $handler->display->display_options['fields']['field_fundings']['table'] = 'field_data_field_fundings';
   $handler->display->display_options['fields']['field_fundings']['field'] = 'field_fundings';
-  $handler->display->display_options['fields']['field_fundings']['label'] = 'Fundings';
+  $handler->display->display_options['fields']['field_fundings']['label'] = 'Funding';
   $handler->display->display_options['fields']['field_fundings']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_fundings']['delta_offset'] = '0';
   /* Field: Content: Themes */
@@ -634,7 +634,7 @@ function humanitarianresponse_contacts_views_default_views() {
     t('Salutation'),
     t('Telephones'),
     t('Coordination Hub'),
-    t('Fundings'),
+    t('Funding'),
     t('Themes'),
     t('Emergencies'),
     t('XML'),
