@@ -84,7 +84,6 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['fields']['field_clusters']['id'] = 'field_clusters';
   $handler->display->display_options['fields']['field_clusters']['table'] = 'field_data_field_clusters';
   $handler->display->display_options['fields']['field_clusters']['field'] = 'field_clusters';
-  $handler->display->display_options['fields']['field_clusters']['label'] = 'Clusters';
   $handler->display->display_options['fields']['field_clusters']['delta_offset'] = '0';
   /* Field: Content: Source */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
@@ -290,6 +289,10 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['tid']['validate']['fail'] = 'ignore';
   $handler->display->display_options['path'] = 'taxonomy/term/%/contacts';
+  $handler->display->display_options['menu']['type'] = 'tab';
+  $handler->display->display_options['menu']['title'] = 'Contacts';
+  $handler->display->display_options['menu']['weight'] = '2';
+  $handler->display->display_options['menu']['context'] = 0;
 
   /* Display: Contacts Block per term */
   $handler = $view->new_display('block', 'Contacts Block per term', 'block_1');
@@ -392,7 +395,6 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['fields']['field_clusters']['id'] = 'field_clusters';
   $handler->display->display_options['fields']['field_clusters']['table'] = 'field_data_field_clusters';
   $handler->display->display_options['fields']['field_clusters']['field'] = 'field_clusters';
-  $handler->display->display_options['fields']['field_clusters']['label'] = 'Clusters';
   $handler->display->display_options['fields']['field_clusters']['delta_offset'] = '0';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -451,14 +453,13 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_locations']['delta_offset'] = '0';
-  /* Field: Content: Coordination Hub(s) */
+  /* Field: Content: Coordination Hub */
   $handler->display->display_options['fields']['field_coordination_hubs']['id'] = 'field_coordination_hubs';
   $handler->display->display_options['fields']['field_coordination_hubs']['table'] = 'field_data_field_coordination_hubs';
   $handler->display->display_options['fields']['field_coordination_hubs']['field'] = 'field_coordination_hubs';
-  $handler->display->display_options['fields']['field_coordination_hubs']['label'] = 'Coordination Hub';
   $handler->display->display_options['fields']['field_coordination_hubs']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_coordination_hubs']['delta_offset'] = '0';
-  /* Field: Content: Funding(s) */
+  /* Field: Content: Funding */
   $handler->display->display_options['fields']['field_fundings']['id'] = 'field_fundings';
   $handler->display->display_options['fields']['field_fundings']['table'] = 'field_data_field_fundings';
   $handler->display->display_options['fields']['field_fundings']['field'] = 'field_fundings';
@@ -507,7 +508,6 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['fields']['field_clusters']['id'] = 'field_clusters';
   $handler->display->display_options['fields']['field_clusters']['table'] = 'field_data_field_clusters';
   $handler->display->display_options['fields']['field_clusters']['field'] = 'field_clusters';
-  $handler->display->display_options['fields']['field_clusters']['label'] = 'Clusters';
   $handler->display->display_options['fields']['field_clusters']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_clusters']['delta_offset'] = '0';
   /* Field: Content: Title */
@@ -564,18 +564,16 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_locations']['delta_offset'] = '0';
-  /* Field: Content: Coordination Hub(s) */
+  /* Field: Content: Coordination Hub */
   $handler->display->display_options['fields']['field_coordination_hubs']['id'] = 'field_coordination_hubs';
   $handler->display->display_options['fields']['field_coordination_hubs']['table'] = 'field_data_field_coordination_hubs';
   $handler->display->display_options['fields']['field_coordination_hubs']['field'] = 'field_coordination_hubs';
-  $handler->display->display_options['fields']['field_coordination_hubs']['label'] = 'Coordination Hub';
   $handler->display->display_options['fields']['field_coordination_hubs']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_coordination_hubs']['delta_offset'] = '0';
   /* Field: Content: Funding */
   $handler->display->display_options['fields']['field_fundings']['id'] = 'field_fundings';
   $handler->display->display_options['fields']['field_fundings']['table'] = 'field_data_field_fundings';
   $handler->display->display_options['fields']['field_fundings']['field'] = 'field_fundings';
-  $handler->display->display_options['fields']['field_fundings']['label'] = 'Funding';
   $handler->display->display_options['fields']['field_fundings']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_fundings']['delta_offset'] = '0';
   /* Field: Content: Themes */
@@ -614,7 +612,7 @@ function humanitarianresponse_contacts_views_default_views() {
     t('next ›'),
     t('last »'),
     t('There are no contacts'),
-    t('Cluster'),
+    t('Clusters'),
     t('Organization'),
     t('Location'),
     t('First name'),
@@ -634,10 +632,11 @@ function humanitarianresponse_contacts_views_default_views() {
     t('Salutation'),
     t('Telephones'),
     t('Coordination Hub'),
-    t('Funding'),
+    t('Fundings'),
     t('Themes'),
     t('Emergencies'),
     t('XML'),
+    t('Funding'),
   );
   $export['contacts'] = $view;
 
