@@ -296,6 +296,8 @@ function humanitarianresponse_contacts_views_default_views() {
 
   /* Display: Contacts Block per term */
   $handler = $view->new_display('block', 'Contacts Block per term', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Key Contacts';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
@@ -627,6 +629,7 @@ function humanitarianresponse_contacts_views_default_views() {
     t('Contacts per term'),
     t('All'),
     t('Contacts Block per term'),
+    t('Key Contacts'),
     t('XLS'),
     t('Name'),
     t('Salutation'),
