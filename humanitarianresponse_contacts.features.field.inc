@@ -43,6 +43,7 @@ function humanitarianresponse_contacts_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -78,6 +79,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'label' => 'Clusters',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -102,7 +104,9 @@ function humanitarianresponse_contacts_field_default_fields() {
       'indexes' => array(),
       'locked' => '0',
       'module' => 'email',
-      'settings' => array(),
+      'settings' => array(
+        'entity_translation_sync' => FALSE,
+      ),
       'translatable' => '0',
       'type' => 'email',
     ),
@@ -144,6 +148,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'label' => 'Email',
       'required' => 1,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -182,6 +187,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'locked' => '0',
       'module' => 'text',
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'max_length' => '255',
       ),
       'translatable' => '0',
@@ -218,6 +224,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'label' => 'First name',
       'required' => 1,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -263,6 +270,7 @@ function humanitarianresponse_contacts_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -302,6 +310,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'label' => 'Job Title',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -341,6 +350,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'locked' => '0',
       'module' => 'text',
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'max_length' => '255',
       ),
       'translatable' => '0',
@@ -377,6 +387,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'label' => 'Last name',
       'required' => 1,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -422,6 +433,7 @@ function humanitarianresponse_contacts_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -457,6 +469,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'label' => 'Coordination Hub',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -465,6 +478,88 @@ function humanitarianresponse_contacts_field_default_fields() {
         'settings' => array(),
         'type' => 'options_buttons',
         'weight' => '20',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-contact-field_display_properties'.
+  $fields['node-contact-field_display_properties'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_display_properties',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'display_properties',
+            'parent' => '0',
+          ),
+        ),
+        'entity_translation_sync' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'contact',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 16,
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_display_properties',
+      'label' => 'Properties',
+      'required' => 0,
+      'settings' => array(
+        'entity_translation_sync' => FALSE,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '28',
       ),
     ),
   );
@@ -502,6 +597,7 @@ function humanitarianresponse_contacts_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -537,6 +633,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'label' => 'Emergencies',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -582,6 +679,7 @@ function humanitarianresponse_contacts_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -617,6 +715,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'label' => 'Funding',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -654,6 +753,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           'url_cutoff' => 80,
         ),
         'enable_tokens' => 1,
+        'entity_translation_sync' => FALSE,
         'title' => 'optional',
         'title_maxlength' => 128,
         'title_value' => '',
@@ -704,6 +804,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           'url_cutoff' => '80',
         ),
         'enable_tokens' => 1,
+        'entity_translation_sync' => FALSE,
         'title' => 'optional',
         'title_maxlength' => '128',
         'title_value' => '',
@@ -716,7 +817,7 @@ function humanitarianresponse_contacts_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '28',
+        'weight' => '30',
       ),
     ),
   );
@@ -754,6 +855,7 @@ function humanitarianresponse_contacts_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -789,6 +891,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'label' => 'Location',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -831,6 +934,7 @@ function humanitarianresponse_contacts_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -870,6 +974,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'label' => 'Organization(s)',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -908,6 +1013,7 @@ function humanitarianresponse_contacts_field_default_fields() {
           'Mrs' => 'Mrs',
         ),
         'allowed_values_function' => '',
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'list_text',
@@ -943,6 +1049,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'label' => 'Salutation',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -982,6 +1089,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'locked' => '0',
       'module' => 'text',
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'max_length' => '255',
       ),
       'translatable' => '0',
@@ -1045,6 +1153,7 @@ function humanitarianresponse_contacts_field_default_fields() {
             ),
           ),
         ),
+        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -1093,6 +1202,7 @@ function humanitarianresponse_contacts_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -1128,6 +1238,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'label' => 'Themes',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -1167,6 +1278,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'locked' => '0',
       'module' => 'text',
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'max_length' => 255,
       ),
       'translatable' => '1',
@@ -1202,6 +1314,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'label' => 'Name',
       'required' => 1,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'hide_label' => array(
           'entity' => 0,
           'page' => 0,
@@ -1244,7 +1357,9 @@ function humanitarianresponse_contacts_field_default_fields() {
       ),
       'locked' => '0',
       'module' => 'text',
-      'settings' => array(),
+      'settings' => array(
+        'entity_translation_sync' => FALSE,
+      ),
       'translatable' => '1',
       'type' => 'text_with_summary',
     ),
@@ -1273,6 +1388,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'required' => FALSE,
       'settings' => array(
         'display_summary' => 0,
+        'entity_translation_sync' => FALSE,
         'text_processing' => 1,
         'user_register_form' => FALSE,
       ),
@@ -1312,6 +1428,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'locked' => '0',
       'module' => 'text',
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'max_length' => 255,
       ),
       'translatable' => '1',
@@ -1341,6 +1458,7 @@ function humanitarianresponse_contacts_field_default_fields() {
       'label' => 'Name',
       'required' => TRUE,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'text_processing' => 0,
         'user_register_form' => FALSE,
       ),
@@ -1370,6 +1488,7 @@ function humanitarianresponse_contacts_field_default_fields() {
   t('Location');
   t('Name');
   t('Organization(s)');
+  t('Properties');
   t('Salutation');
   t('Telephone(s)');
   t('Themes');
