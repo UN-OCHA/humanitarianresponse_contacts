@@ -14,8 +14,8 @@ function humanitarianresponse_contacts_user_default_permissions() {
   $permissions['administer job_title vocabulary terms'] = array(
     'name' => 'administer job_title vocabulary terms',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'vppr',
   );
@@ -24,8 +24,8 @@ function humanitarianresponse_contacts_user_default_permissions() {
   $permissions['clear csv_contacts feeds'] = array(
     'name' => 'clear csv_contacts feeds',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'feeds',
   );
@@ -34,7 +34,7 @@ function humanitarianresponse_contacts_user_default_permissions() {
   $permissions['create contact content'] = array(
     'name' => 'create contact content',
     'roles' => array(
-      0 => 'editor',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -43,7 +43,7 @@ function humanitarianresponse_contacts_user_default_permissions() {
   $permissions['delete own contact content'] = array(
     'name' => 'delete own contact content',
     'roles' => array(
-      0 => 'editor',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -52,7 +52,7 @@ function humanitarianresponse_contacts_user_default_permissions() {
   $permissions['edit own contact content'] = array(
     'name' => 'edit own contact content',
     'roles' => array(
-      0 => 'editor',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -61,8 +61,8 @@ function humanitarianresponse_contacts_user_default_permissions() {
   $permissions['import csv_contacts feeds'] = array(
     'name' => 'import csv_contacts feeds',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'feeds',
   );
@@ -71,8 +71,8 @@ function humanitarianresponse_contacts_user_default_permissions() {
   $permissions['unlock csv_contacts feeds'] = array(
     'name' => 'unlock csv_contacts feeds',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'feeds',
   );
