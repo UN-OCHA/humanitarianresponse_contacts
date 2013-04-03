@@ -41,7 +41,7 @@ function humanitarianresponse_contacts_node_info() {
     'contact' => array(
       'name' => t('Contact'),
       'base' => 'node_content',
-      'description' => 'Use <em>Contact</em> for storing information about a person. The organisation this person works for, must have been first saved into Taxonomy / Organization.',
+      'description' => t('Use <em>Contact</em> for storing information about a person. The organisation this person works for, must have been first saved into Taxonomy / Organization.'),
       'has_title' => '1',
       'title_label' => t('Name'),
       'help' => '',
