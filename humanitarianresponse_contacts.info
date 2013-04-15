@@ -30,6 +30,7 @@ dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = title
 dependencies[] = views
+dependencies[] = visualization
 dependencies[] = views_data_export
 dependencies[] = vppr
 features[ctools][] = ds:ds:1
