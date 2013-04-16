@@ -769,6 +769,153 @@ function humanitarianresponse_contacts_views_default_views() {
     'contact' => 'contact',
   );
   $handler->display->display_options['block_description'] = 'Contacts Block per term';
+
+  /* Display: OpenLayers Data Overlay */
+  $handler = $view->new_display('openlayers', 'OpenLayers Data Overlay', 'openlayers_data');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Operational Presence Data';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'openlayers_data';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_location_pcode',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['style_options']['data_source'] = array(
+    'value' => 'wkt',
+    'other_lat' => 'nid',
+    'other_lon' => 'nid',
+    'wkt' => 'field_location',
+    'other_top' => 'nid',
+    'other_right' => 'nid',
+    'other_bottom' => 'nid',
+    'other_left' => 'nid',
+    'name_field' => 'field_contact_first_name',
+    'description_field' => '',
+    'view_mode' => 'full',
+    'style_field' => '',
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Field: Location (field_locations) */
+  $handler->display->display_options['relationships']['field_locations_tid']['id'] = 'field_locations_tid';
+  $handler->display->display_options['relationships']['field_locations_tid']['table'] = 'field_data_field_locations';
+  $handler->display->display_options['relationships']['field_locations_tid']['field'] = 'field_locations_tid';
+  $handler->display->display_options['relationships']['field_locations_tid']['required'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Content: Clusters */
+  $handler->display->display_options['fields']['field_clusters']['id'] = 'field_clusters';
+  $handler->display->display_options['fields']['field_clusters']['table'] = 'field_data_field_clusters';
+  $handler->display->display_options['fields']['field_clusters']['field'] = 'field_clusters';
+  $handler->display->display_options['fields']['field_clusters']['label'] = '';
+  $handler->display->display_options['fields']['field_clusters']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_clusters']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_clusters']['delta_offset'] = '0';
+  /* Field: Content: Last name */
+  $handler->display->display_options['fields']['field_contact_lastname']['id'] = 'field_contact_lastname';
+  $handler->display->display_options['fields']['field_contact_lastname']['table'] = 'field_data_field_contact_lastname';
+  $handler->display->display_options['fields']['field_contact_lastname']['field'] = 'field_contact_lastname';
+  $handler->display->display_options['fields']['field_contact_lastname']['label'] = '';
+  $handler->display->display_options['fields']['field_contact_lastname']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_contact_lastname']['alter']['path'] = 'node/[nid]';
+  $handler->display->display_options['fields']['field_contact_lastname']['element_label_colon'] = FALSE;
+  /* Field: Content: First name */
+  $handler->display->display_options['fields']['field_contact_first_name']['id'] = 'field_contact_first_name';
+  $handler->display->display_options['fields']['field_contact_first_name']['table'] = 'field_data_field_contact_first_name';
+  $handler->display->display_options['fields']['field_contact_first_name']['field'] = 'field_contact_first_name';
+  $handler->display->display_options['fields']['field_contact_first_name']['label'] = '';
+  $handler->display->display_options['fields']['field_contact_first_name']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_contact_first_name']['alter']['text'] = '[field_contact_first_name] [field_contact_lastname]';
+  $handler->display->display_options['fields']['field_contact_first_name']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_contact_first_name']['alter']['path'] = 'node/[nid]';
+  $handler->display->display_options['fields']['field_contact_first_name']['element_label_colon'] = FALSE;
+  /* Field: Taxonomy term: Location */
+  $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
+  $handler->display->display_options['fields']['field_location']['table'] = 'field_data_field_location';
+  $handler->display->display_options['fields']['field_location']['field'] = 'field_location';
+  $handler->display->display_options['fields']['field_location']['relationship'] = 'field_locations_tid';
+  $handler->display->display_options['fields']['field_location']['label'] = '';
+  $handler->display->display_options['fields']['field_location']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_location']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_location']['click_sort_column'] = 'wkt';
+  $handler->display->display_options['fields']['field_location']['settings'] = array(
+    'data' => 'full',
+  );
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name_field']['id'] = 'name_field';
+  $handler->display->display_options['fields']['name_field']['table'] = 'field_data_name_field';
+  $handler->display->display_options['fields']['name_field']['field'] = 'name_field';
+  $handler->display->display_options['fields']['name_field']['relationship'] = 'field_locations_tid';
+  $handler->display->display_options['fields']['name_field']['label'] = '';
+  $handler->display->display_options['fields']['name_field']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['name_field']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name_field']['link_to_entity'] = 0;
+  /* Field: Taxonomy term: PCode */
+  $handler->display->display_options['fields']['field_location_pcode']['id'] = 'field_location_pcode';
+  $handler->display->display_options['fields']['field_location_pcode']['table'] = 'field_data_field_location_pcode';
+  $handler->display->display_options['fields']['field_location_pcode']['field'] = 'field_location_pcode';
+  $handler->display->display_options['fields']['field_location_pcode']['relationship'] = 'field_locations_tid';
+  $handler->display->display_options['fields']['field_location_pcode']['label'] = '';
+  $handler->display->display_options['fields']['field_location_pcode']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_location_pcode']['alter']['text'] = '<U><Strong>[name_field]</Strong></U>';
+  $handler->display->display_options['fields']['field_location_pcode']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'contact' => 'contact',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+
+  /* Display: Block Operational Presence Map */
+  $handler = $view->new_display('block', 'Block Operational Presence Map', 'contacts_map');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Contacts Map';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'openlayers_map';
+  $handler->display->display_options['style_options']['map'] = 'operational_presence_map';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'contact' => 'contact',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   $translatables['contacts'] = array(
     t('Master'),
     t('Contacts'),
@@ -816,6 +963,12 @@ function humanitarianresponse_contacts_views_default_views() {
     t('Number of Contacts Block per term'),
     t('Number of contacts per cluster'),
     t('Number of contacts'),
+    t('OpenLayers Data Overlay'),
+    t('term from field_locations'),
+    t('[field_contact_first_name] [field_contact_lastname]'),
+    t('<U><Strong>[name_field]</Strong></U>'),
+    t('Block Operational Presence Map'),
+    t('Contacts Map'),
   );
   $export['contacts'] = $view;
 
