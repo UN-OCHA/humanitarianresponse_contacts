@@ -10,16 +10,6 @@
 function humanitarianresponse_contacts_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: administer job_title vocabulary terms.
-  $permissions['administer job_title vocabulary terms'] = array(
-    'name' => 'administer job_title vocabulary terms',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'manager' => 'manager',
-    ),
-    'module' => 'vppr',
-  );
-
   // Exported permission: clear csv_contacts feeds.
   $permissions['clear csv_contacts feeds'] = array(
     'name' => 'clear csv_contacts feeds',
