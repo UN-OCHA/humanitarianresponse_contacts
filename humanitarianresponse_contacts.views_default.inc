@@ -435,6 +435,7 @@ function humanitarianresponse_contacts_views_default_views() {
   $handler->display->display_options['fields']['field_telephones']['field'] = 'field_telephones';
   $handler->display->display_options['fields']['field_telephones']['label'] = 'Telephones';
   $handler->display->display_options['fields']['field_telephones']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_telephones']['separator'] = ';';
   /* Field: Field: Source */
   $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
   $handler->display->display_options['fields']['field_organizations']['table'] = 'field_data_field_organizations';

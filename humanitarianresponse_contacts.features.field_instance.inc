@@ -398,7 +398,7 @@ function humanitarianresponse_contacts_field_default_field_instances() {
           'taxonomy_term_link' => TRUE,
           'taxonomy_term_separator' => ', ',
         ),
-        'type' => 'ds_taxonomy_separator', 
+        'type' => 'ds_taxonomy_separator',
         'weight' => 7,
       ),
       'ical' => array(
@@ -802,7 +802,6 @@ function humanitarianresponse_contacts_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Clusters');
   t('Coordination Hub');
-  t('Description');
   t('Email');
   t('Emergencies');
   t('First name');
